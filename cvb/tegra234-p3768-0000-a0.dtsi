@@ -18,9 +18,13 @@
 #include "tegra234-p3768-audio.dtsi"
 
 #define GMSL
+#define GMSL_USE_I2C_BUS_8
+// #define GMSL_USE_I2C_MUX
 
 #if defined(GMSL)
+#if defined(GMSL_USE_I2C_MUX)
 #include "tegra234-p3768-camera-gmsl.dtsi"
+#endif
 #include "../../../../gmsl/kernel-dts/gmsl.dtsi"
 #else
 #include "tegra234-p3768-camera-rbpcv3-imx477.dtsi"
