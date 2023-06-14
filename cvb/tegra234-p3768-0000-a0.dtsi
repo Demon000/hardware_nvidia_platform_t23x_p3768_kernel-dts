@@ -19,6 +19,8 @@
 
 #define GMSL
 #define GMSL_USE_I2C_BUS_8
+// #define GMSL_USE_PORT_1
+#define GMSL_USE_PORT_2
 #define GMSL_LANE_POLARITY_SWAP
 // #define GMSL_USE_I2C_MUX
 
