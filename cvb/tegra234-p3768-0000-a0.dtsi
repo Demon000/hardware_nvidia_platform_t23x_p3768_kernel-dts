@@ -18,17 +18,28 @@
 #include "tegra234-p3768-audio.dtsi"
 
 #define GMSL
-#define GMSL_USE_I2C_BUS_8
+// #define GMSL_USE_I2C_BUS_8
+#define GMSL_USE_I2C_MUX_BUS
+// #define GMSL_USE_I2C_MUX
+
 // #define GMSL_USE_PORT_1
 #define GMSL_USE_PORT_2
 #define GMSL_LANE_POLARITY_SWAP
-// #define GMSL_USE_I2C_MUX
 
 #if defined(GMSL)
+
+#if defined(GMSL_USE_I2C_MUX_BUS) || defined(GMSL_USE_I2C_MUX)
+&cam_i2c {
+	clock-frequency = <100000>;
+};
+#endif
+
 #if defined(GMSL_USE_I2C_MUX)
 #include "tegra234-p3768-camera-gmsl.dtsi"
 #endif
+
 #include "../../../../gmsl/kernel-dts/gmsl.dtsi"
+
 #else
 #include "tegra234-p3768-camera-rbpcv3-imx477.dtsi"
 #include "tegra234-p3768-camera-rbpcv2-imx219.dtsi"
