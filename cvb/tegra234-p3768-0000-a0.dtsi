@@ -22,9 +22,9 @@
 #define GMSL_USE_I2C_MUX_BUS
 // #define GMSL_USE_I2C_MUX
 
-// #define GMSL_USE_PORT_1
-#define GMSL_USE_PORT_2
-// #define GMSL_LANE_POLARITY_SWAP
+#define GMSL_USE_PORT_1
+// #define GMSL_USE_PORT_2
+#define GMSL_LANE_POLARITY_SWAP
 
 #if defined(GMSL)
 
