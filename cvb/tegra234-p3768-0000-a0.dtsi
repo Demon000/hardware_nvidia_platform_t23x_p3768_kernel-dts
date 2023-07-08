@@ -26,6 +26,9 @@
 // #define GMSL_USE_PORT_2
 #define GMSL_LANE_POLARITY_SWAP
 
+#define GMSL_SER_0_MAX9295A
+#define GMSL_SER_1_MAX9295A
+
 #if defined(GMSL)
 
 #if defined(GMSL_USE_I2C_MUX_BUS) || defined(GMSL_USE_I2C_MUX)
